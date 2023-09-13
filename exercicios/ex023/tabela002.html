@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -19,13 +20,36 @@
             padding: 10px;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color:rgb(46, 46, 46) ;
+        }
+
+       
         thead, tfoot {
-            background-color: gray;
+            background-color: rgb(46, 46, 46);
             color: white;
         }
 
         .num {
             text-align: right;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        .populacao {
+            width: 100px;
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: rgb(203, 206, 165);
+
         }
     </style>
 </head>
@@ -34,6 +58,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -42,10 +67,11 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas.</caption>
         <thead>
             <tr>
                 <th>Estado</th>
-                <th>População</th>
+                <th class="populacao">População</th>
             </tr>
         </thead>
         <tbody>
